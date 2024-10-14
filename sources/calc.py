@@ -33,7 +33,17 @@ def modulo(arg1,arg2):
     try:
         return int(arg1)%int(arg2)
     except ValueError:
-        print("Un des arguments n'est pas un entier")    
+        print("Un des arguments n'est pas un entier")
+
+def max(a, b):
+    try:
+        if a > b:
+            return a
+        else:
+            return b
+    except ValueError:
+        print("Un des arguments n'est pas un entier.")
+
 
 def ope(operateur,arg1,arg2):   
     if operateur=='+':
@@ -46,5 +56,7 @@ def ope(operateur,arg1,arg2):
         return mult(arg1,arg2)
     elif operateur=="/":
         return div(arg1,arg2)
+    elif operateur=="max":
+        return max(arg1,arg2)
     else:
         print("L'opérateur {} n'est pas reconnu.".format(operateur))
